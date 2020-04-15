@@ -35,8 +35,8 @@ install_bootfix () {
 }
 
 uninstall_bootfix () {
+  [ -L /etc/rc.d/S14nvramrestore ] && rm /etc/rc.d/S14nvramrestore
   [ -e /etc/init.d/nvramrestore ] && rm /etc/init.d/nvramrestore
-  [ -e /etc/rc.d/S14nvramrestore ] && rm /etc/rc.d/S14nvramrestore
 }
 
 case $1 in
